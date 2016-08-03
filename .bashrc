@@ -1,8 +1,19 @@
-# .bashrc
-
-# Source global definitions
-if [ -f /etc/bashrc ]; then
-	. /etc/bashrc
+if [ -f /etc/bashrc ]
+then
+    source /etc/bashrc
+fi
+if [ `uname` == Darwin ]
+then
+    echo Hello, Darwin
+    alias ll='ls -l'
+    alias vi='vim'
+    export CLICOLOR=1
+    export LSCOLORS=gxfxaxdxcxegedabagacad
+    export HISTCONTROL=ignoreboth
+fi
+if [ `uname` == Linux ]
+then
+    echo Hello, Linux
 fi
 
-# User specific aliases and functions
+export PATH=$PATH:~/bin
