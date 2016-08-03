@@ -10,6 +10,7 @@ set softtabstop=4
 set shiftwidth=4
 set tabstop=4
 set expandtab
+set mouse=a
 
 filetype plugin indent on
 
@@ -132,14 +133,6 @@ func! SetPosition()
 endfunc
 
 " Set file title according to its type
-autocmd BufNewFile *.cpp exec ":call SetCppTitle()"
-func! SetCppTitle()
-    call setline(1,"#include <iostream>")
-    call setline(2,"using namespace std;")
-    call setline(3,"")
-    call setline(4,"int main() {")
-    call setline(5,"}")
-endfunc
 autocmd BufNewFile *.py exec ":call SetPyTitle()"
 func! SetPyTitle()
     call setline(1,"#!usr/bin/env python")

@@ -1,0 +1,3 @@
+caption always "%{= kw}%-w%{= kG}%{+b}[%n %t]%{-b}%{= kw}%+w %=%d %M %0c %{g}%H%{-}"
+defscrollback 3000
+termcapinfo xterm* ti@:te@
