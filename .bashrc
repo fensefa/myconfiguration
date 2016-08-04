@@ -16,4 +16,5 @@ then
     echo Hello, Linux
 fi
 
-export PATH=$PATH:~/bin
+export PATH=$PATH:~/bin/
+export PYTHONPATY=$PYTHONPATH:~/libpy/
