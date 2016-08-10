@@ -1,11 +1,11 @@
 FILES = bashrc inputrc screenrc vimrc
 
-all:
-	echo $(FILES)
+all: $(FILES)
+	@echo $(FILES)
 
-install:
+install: $(FILES)
 	@for file in $(FILES); do \
-		echo $$file; \
+		echo cp $$file ~/.$$file; \
 	done
 
 update:
