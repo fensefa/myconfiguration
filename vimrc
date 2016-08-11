@@ -1,5 +1,6 @@
-" My configuration for vim
-" Last edition: 2016-04-22 
+" my configuration for vim
+" last edition: 2016-07-22 
+" author: xujiang
 
 set nu
 set hlsearch " heightlight serch
