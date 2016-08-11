@@ -1,4 +1,4 @@
-FILES = bashrc inputrc screenrc vimrc
+FILES = bashrc inputrc screenrc vimrc bash_profile
 
 all: $(FILES)
 	@echo $(FILES)

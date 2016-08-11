@@ -1,2 +1,2 @@
 # myconfiguration
-README
+## this my configuration for my computers
