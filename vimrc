@@ -1,9 +1,9 @@
 " my configuration for vim
-" last edition: 2016-07-22 
 " author: xujiang
 
 set nu
 set hlsearch " heightlight serch
+set ignorecase smartcase
 syntax on
 set cindent
 set autoindent
@@ -107,7 +107,7 @@ func! CompileGcc()
     elseif &filetype == 'java' 
         exec "!javac %"
     elseif &filetype == 'sh'
-	exec "!sh -n %"
+        exec "!sh -n %"
     endif
 endfunc
 
@@ -119,9 +119,9 @@ func! Rungdb()
     exec "!g++ % -g -o %<"
     let os = substitute(system('uname'), "\n", "", "")
     if os == 'Darwin'
-	    exec "!lldb ./%<"
+        exec "!lldb ./%<"
     elseif os == 'Linux'
-	    exec "!gdb ./%<"
+        exec "!gdb ./%<"
     endif
 endfunc
 
@@ -142,4 +142,13 @@ endfunc
 autocmd BufNewFile *.sh exec ":call SetBashTitle()"
 func! SetBashTitle()
     call setline(1,"#!usr/bin/env bash")
+endfunc
+autocmd BufNewFile *.cpp exec ":call SetCppTitle()"
+func! SetCppTitle()
+    call setline(1,"#include <iostream>")
+    call setline(2,"using namespace std;")
+    call setline(3,"")
+    call setline(4,"int main() {")
+    call setline(5,"    return 0;")
+    call setline(6,"}")
 endfunc

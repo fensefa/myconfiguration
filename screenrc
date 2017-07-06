@@ -10,6 +10,9 @@ termcapinfo xterm* ti@:te@
 # clear screen after closing vim
 altscreen on
 
+# enable mouse
+mousetrack on
+
 # enable 256 color
 term screen-256color
 

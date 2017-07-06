@@ -1,5 +1,11 @@
 FILES = bashrc inputrc screenrc vimrc bash_profile
 
+help:
+	@echo -e \
+		"\tall : list all the tracked files\n" \
+		"\tinstall : copy files to home director\n" \
+		"\tupdate : copy file from home director"
+
 all: $(FILES)
 	@echo $(FILES)
 
